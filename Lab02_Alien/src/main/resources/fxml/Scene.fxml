@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="343.0" prefWidth="513.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.alien.FXMLController">
+<BorderPane prefHeight="274.0" prefWidth="382.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.alien.FXMLController">
    <top>
       <Label text="Lab 2 - Alien Translator" BorderPane.alignment="CENTER">
          <BorderPane.margin>
@@ -19,4 +25,29 @@
    <padding>
       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
    </padding>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Alien Text" wrappingWidth="77.13671875" />
+                  <TextField fx:id="txtParole" prefHeight="25.0" prefWidth="160.0" />
+                  <Button mnemonicParsing="false" onAction="#doTraslate" text="Button">
+                     <HBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextArea fx:id="txtResult" prefHeight="100.0" prefWidth="363.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <Button mnemonicParsing="false" onAction="#doReset" text="Clear Text " BorderPane.alignment="CENTER" />
+   </bottom>
 </BorderPane>
